@@ -1,17 +1,17 @@
-import Footer from "./components/Footer.jsx";
-import Navbar from "./components/Navbar.jsx";
-import Carousel from "./components/Carousel.jsx";
-import Gap from "./components/Gap.jsx"
+import MainLayout from "./layouts/MainLayout.jsx";
+import Home from "./pages/Home.jsx";
+import NotFound from "./pages/NotFound.jsx";
+import { Route, Routes } from "react-router";
 
 function App() {
 
   return (
-    <div>
-      <Navbar />
-      <Gap />
-      <Carousel />
-      <Footer />
-    </div>
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Home />} />
+      </Route>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   )
 }
 
