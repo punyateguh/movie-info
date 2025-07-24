@@ -5,19 +5,22 @@ Simple, fast, and clean UI for learning modern frontend development.
 
 ---
 
+
 ## 🚀 Tech Stack
 
-| Tool                                      | Description                                |
-|-------------------------------------------|--------------------------------------------|
-| [React 19](https://react.dev)             | UI Library (functional components)         |
-| [React Router 7](https://reactrouter.com) | SPA navigation without page reload         |
-| [Tailwind CSS 4](https://tailwindcss.com) | Utility-first CSS framework                |
-| [Lucide React](https://lucide.dev)        | Beautiful icon set for React               |
-| [Axios](https://axios-http.com)           | HTTP client for API calls                  |
-| [Keen Slider](https://keen-slider.io)     | Touch slider for carousel UI               |
-| [Vite](https://vitejs.dev)                | Lightning fast build tool                  |
+| Tool                                               | Description                                |
+|----------------------------------------------------|--------------------------------------------|
+| [React 19](https://react.dev)                      | UI Library (functional components)         |
+| [React Router 7](https://reactrouter.com)          | SPA navigation without page reload         |
+| [Tailwind CSS 4](https://tailwindcss.com)          | Utility-first CSS framework                |
+| [Lucide React](https://lucide.dev)                 | Beautiful icon set for React               |
+| [Axios](https://axios-http.com)                    | HTTP client for API calls                  |
+| [Keen Slider](https://keen-slider.io)              | Touch slider for carousel UI               |
+| [TanStack Query](https://tanstack.com/query/latest)| Data fetching and caching library          |
+| [Vite](https://vitejs.dev)                         | Lightning fast build tool                  |
 
 ---
+
 
 ## 📸 Features
 
@@ -25,6 +28,7 @@ Simple, fast, and clean UI for learning modern frontend development.
 - 🎬 Movie info cards with **responsive layout**  
 - 🌐 Mobile-first design using **Tailwind**  
 - 📥 API-ready with **Axios**  
+- ⚡ API caching with **TanStack Query**
 - 🧭 SPA navigation with **React Router**  
 - 🎨 Clean and modern UI using **Lucide Icons**  
 

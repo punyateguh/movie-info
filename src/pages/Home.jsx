@@ -1,11 +1,11 @@
 import Carousel from "../components/Carousel.jsx";
-import Gap from "../components/Gap.jsx"
+import Title from "../components/Title.jsx";
 
 export default function Home(){
 
     return(
         <>
-            <Gap />
+            <Title label="Trend" labelBlack="ing" />
             <Carousel />
         </>
     )

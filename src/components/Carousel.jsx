@@ -1,12 +1,11 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import useMovie from "../hooks/useMovie.js";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 
 function MovieCarousel() {
-    const [movies, setMovies] = useState([]);
-    const urlBase = import.meta.env.VITE_URL;
-        
+    const {movies,error,isError,isLoading} = useMovie();
+
+   
     const [sliderRef] = useKeenSlider({
         loop: true,
         slides: {
@@ -23,24 +22,14 @@ function MovieCarousel() {
         },
     });
 
-    useEffect(() => {
-        const fetchMovies = async () => {
-        try {
-            const res = await axios.get(urlBase+"films");
-            setMovies(res.data);
-        } catch (err) {
-            console.error("Gagal fetch data:", err);
-        }
-        };
-
-        fetchMovies();
-    }, []);
-
     if (movies.length === 0) {
         return <div className="text-center p-4">Loading...</div>;
     }
+    
+    if (isLoading) return <div className="text-center p-4">Loading...</div>;
+    if (isError) return <div className="text-center p-4">Error: {error.message}</div>;
 
-
+    
   return (
     <>
         <div ref={sliderRef} className="keen-slider px-2">
