@@ -1,12 +1,14 @@
+import { useEffect } from "react";
 import useMovie from "../hooks/useMovie.js";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
+
 
 function MovieCarousel() {
     const {movies,error,isError,isLoading} = useMovie();
 
    
-    const [sliderRef] = useKeenSlider({
+    const [sliderRef,slider] = useKeenSlider({
         loop: true,
         slides: {
         perView: 5,
@@ -21,6 +23,15 @@ function MovieCarousel() {
             },
         },
     });
+
+    useEffect(() => {
+        if (!slider) return;
+        const timer = setInterval(() => {
+        slider.current?.next();
+        }, 5000);
+
+        return () => clearInterval(timer);
+    }, [slider]);
 
     if (movies.length === 0) {
         return <div className="text-center p-4">Loading...</div>;
