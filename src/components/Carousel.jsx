@@ -11,7 +11,7 @@ function MovieCarousel() {
     const [sliderRef,slider] = useKeenSlider({
         loop: true,
         slides: {
-        perView: 5,
+        perView: 8,
         spacing: 20,
         },
         breakpoints: {
@@ -44,17 +44,17 @@ function MovieCarousel() {
   return (
     <>
         <div ref={sliderRef} className="keen-slider px-2">
-        {movies.map((item) => (
-            <a href="#" key={item.id} className="keen-slider__slide bg-white p-2 rounded">
-            <img
-                src={item.image ? item.image : "#"}
-                alt={item.title}
-                className="w-full rounded mb-2  object-cover transition-transform duration-500 hover:scale-95 "
-            />
-            <h3 className="text-md font-semibold">{item.title}</h3>
-            <p className="text-sm text-gray-600">{item.release_date || "Tahun tidak diketahui"}</p>
-            </a>
-        ))}
+            {movies.map((item) => (
+                <a href="#" key={item.id} className="keen-slider__slide bg-white p-2 rounded">
+                <img
+                    src={item.image ? item.image : "#"}
+                    alt={item.title} loading="lazy"
+                    className="w-full rounded mb-2  object-cover transition-transform duration-500 hover:scale-95 "
+                />
+                <h3 className="text-md font-semibold">{item.title}</h3>
+                <p className="text-sm text-gray-600">{item.release_date || "Tahun tidak diketahui"}</p>
+                </a>
+            ))}
         </div>
     </>
   );

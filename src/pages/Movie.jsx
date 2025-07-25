@@ -14,9 +14,8 @@ export default function Movie(){
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                 {movies.slice(0,10).map((item) => (
                     <div key={item.id}>
-                        <img className="h-auto max-w-full rounded-lg object-cover transition-transform duration-500 hover:scale-95" src={item.image} alt={item.title} />
+                        <img className="h-auto max-w-full rounded-lg object-cover transition-transform duration-500 hover:scale-95" src={item.image} alt={item.title} loading="lazy"/>
                     </div>
-                
                 ))}
             </div>
 

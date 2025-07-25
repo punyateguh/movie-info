@@ -1,6 +1,5 @@
-import Button from "../components/Button.jsx";
+import ButtonLink from "../components/ButtonLink.jsx";
 import Gap from "../components/Gap.jsx"
-import Footer from "../components/Footer.jsx"
 
 export default function NotFound(){
 
@@ -16,7 +15,7 @@ export default function NotFound(){
                     Maaf, halaman yang kamu cari ditemukan
                 </p>
                 <Gap />
-                <Button to="/" text="Kembali ke Home" />
+                <ButtonLink to="/" text="Kembali ke Home" />
             </div>
         </>
     )
